@@ -16,6 +16,7 @@ input {
 }
 
 pre {
+    font-family: "MS Gothic";
     white-space: pre;
     overflow-x: auto;
     background: #fff;

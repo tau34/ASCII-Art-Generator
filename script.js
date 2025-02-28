@@ -24,7 +24,7 @@ function getAsciiChar(grayValue) {
     }
 
     // 最も近い濃淡の文字を返す
-    return intensityData[low] ? intensityData[low][1] : ' ';
+    return intensityData[low] ? intensityData[low][1] : '  ';
 }
 
 document.getElementById('imageUpload').addEventListener('change', function(event) {
