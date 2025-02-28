@@ -39,11 +39,8 @@ document.getElementById('imageUpload').addEventListener('change', function(event
             const canvas = document.getElementById('canvas');
             const ctx = canvas.getContext('2d');
 
-            // 画像サイズ調整
-            const width = 100;
-            const height = Math.floor((img.height / img.width) * width);
-            canvas.width = width;
-            canvas.height = height;
+            canvas.width = img.width;
+            canvas.height = img.height;
 
             ctx.drawImage(img, 0, 0, width, height);
             const imageData = ctx.getImageData(0, 0, width, height).data;
