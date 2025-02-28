@@ -39,11 +39,14 @@ document.getElementById('imageUpload').addEventListener('change', function(event
             const canvas = document.getElementById('canvas');
             const ctx = canvas.getContext('2d');
 
-            canvas.width = img.width;
-            canvas.height = img.height;
+            // 画像サイズ調整
+            const width = img.width;
+            const height = img.height;
+            canvas.width = width;
+            canvas.height = height;
 
-            ctx.drawImage(img, 0, 0, img.width, img.height);
-            const imageData = ctx.getImageData(0, 0, img.width, img.height).data;
+            ctx.drawImage(img, 0, 0, width, height);
+            const imageData = ctx.getImageData(0, 0, width, height).data;
 
             let asciiArt = "";
             for (let y = 0; y < height; y++) {
