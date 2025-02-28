@@ -42,8 +42,8 @@ document.getElementById('imageUpload').addEventListener('change', function(event
             canvas.width = img.width;
             canvas.height = img.height;
 
-            ctx.drawImage(img, 0, 0, width, height);
-            const imageData = ctx.getImageData(0, 0, width, height).data;
+            ctx.drawImage(img, 0, 0, img.width, img.height);
+            const imageData = ctx.getImageData(0, 0, img.width, img.height).data;
 
             let asciiArt = "";
             for (let y = 0; y < height; y++) {
